@@ -1,0 +1,131 @@
+#Shaders: 7
+ID 0
+VSFile: VSEffect.glsl
+FSFile: FSBW.glsl
+ID 1
+VSFile: VSEffect.glsl
+FSFile: FSBlur.glsl
+ID 2
+VSFile: VSEffect.glsl
+FSFile: FSPreBloom.glsl
+ID 3
+VSFile: VSEffect.glsl
+FSFile: FSPostBloom.glsl
+ID 4
+VSFile: VSEffect.glsl
+FSFile: FSDOFBlur.glsl
+ID 5
+VSFile: VSEffect.glsl
+FSFile: FSDOF.glsl
+ID 6
+VSFile: VSEffect.glsl
+FSFile: FSEdgeDetection.glsl
+
+#FBO
+NoFBO 3
+
+#Effects: 5
+
+ID 0
+Name BW
+NoPasses: 1
+PassID 0
+PassName BW
+   ShaderID 0
+   Textures: 1c, 0, 0
+   Target: 0
+   OtherData: 0.0
+   
+ID 1
+Name BLUR
+NoPasses: 1
+PassID 0
+PassName BW
+   ShaderID 1
+   Textures: 1c, 0, 0
+   Target: 0
+   OtherData: 5.0
+   
+ID 2
+Name BLOOM
+NoPasses: 7
+PassID 0
+PassName Prebloom
+   ShaderID 2
+   Textures: 1c, 0, 0
+   Target: 2
+   OtherData: 0.8
+PassID 1
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 0, 0
+   Target: 3
+   OtherData: 5.0
+PassID 2
+PassName Blur
+   ShaderID 1
+   Textures: 3c, 0, 0
+   Target: 2
+   OtherData: 17.0
+PassID 3
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 0, 0
+   Target: 3
+   OtherData: 31.0
+PassID 4
+PassName Blur
+   ShaderID 1
+   Textures: 3c, 00, 00
+   Target: 2
+   OtherData: 43.0
+PassID 5
+PassName Blur
+   ShaderID 1
+   Textures: 2c, 00, 00
+   Target: 3
+   OtherData: 63.0
+PassID 6
+PassName PostBloom
+   ShaderID 3
+   Textures: 1c, 3c, 0
+   Target: 0
+   OtherData: 1.5
+   
+ID 3
+Name DOF
+NoPasses: 4
+PassID 0
+PassName Blur
+   ShaderID 4
+   Textures: 1d, 1c, 0
+   Target: 2
+   OtherData: 5.0, 0.1, 500.0, 15.0, 5.0 //Step - Near - Far - Fade - Clarity
+PassID 1
+PassName Blur
+   ShaderID 4
+   Textures: 1d, 2c, 0
+   Target: 3
+   OtherData: 9.0, 0.1, 500.0, 15.0, 5.0
+PassID 2
+PassName Blur
+   ShaderID 4
+   Textures: 1d, 3c, 0
+   Target: 2
+   OtherData: 16.0, 0.1, 500.0, 15.0, 5.0
+PassID 3
+PassName Blur
+   ShaderID 5
+   Textures: 1c, 1d, 2c
+   Target: 0
+   OtherData: 1.0, 0.1, 500.0, 15.0, 5.0
+   
+ID 4
+Name EdgleDitection
+NoPasses: 1
+PassID 0
+PassName BW
+   ShaderID 6
+   Textures: 1c, 0, 0
+   Target: 0
+   OtherData: 0.0

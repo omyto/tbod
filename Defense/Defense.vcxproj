@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC024EC8-32F4-4657-A2CB-14D2B3A931F8}</ProjectGuid>
+    <RootNamespace>DefenseFramework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Defense</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\BIN\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AuthorState.cpp" />
+    <ClCompile Include="BoxObject.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletsManager.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="EnemyBullet.cpp" />
+    <ClCompile Include="FBO.cpp" />
+    <ClCompile Include="FontGame.cpp" />
+    <ClCompile Include="GameOverState.cpp" />
+    <ClCompile Include="GamePlayManager.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="HelpState.cpp" />
+    <ClCompile Include="InGameState.cpp" />
+    <ClCompile Include="LevelCompleteState.cpp" />
+    <ClCompile Include="Lights.cpp" />
+    <ClCompile Include="LoadFNT.cpp" />
+    <ClCompile Include="LoadingState.cpp" />
+    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MainFramework.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Object2DManager.cpp" />
+    <ClCompile Include="Pass.cpp" />
+    <ClCompile Include="PrimaryWeapon.cpp" />
+    <ClCompile Include="ResourcesManager.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Shaders.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuthorState.h" />
+    <ClInclude Include="BoxObject.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletsManager.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="EnemyBullet.h" />
+    <ClInclude Include="FBO.h" />
+    <ClInclude Include="FontGame.h" />
+    <ClInclude Include="GameDefineList.h" />
+    <ClInclude Include="GameOverState.h" />
+    <ClInclude Include="GamePlayManager.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="HelpState.h" />
+    <ClInclude Include="InGameState.h" />
+    <ClInclude Include="LevelCompleteState.h" />
+    <ClInclude Include="Lights.h" />
+    <ClInclude Include="LoadFNT.h" />
+    <ClInclude Include="LoadingState.h" />
+    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Object2DManager.h" />
+    <ClInclude Include="Pass.h" />
+    <ClInclude Include="PrimaryWeapon.h" />
+    <ClInclude Include="ResourcesManager.h" />
+    <ClInclude Include="Robot.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShaderPropertiesLoc.h" />
+    <ClInclude Include="Shaders.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\EM.txt" />
+    <Text Include="..\Resources\RM.txt" />
+    <Text Include="..\Resources\SM.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shaders\CubeFS.fs" />
+    <None Include="..\Resources\Shaders\CubeVS.vs" />
+    <None Include="..\Resources\Shaders\Effects\FSBlur.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSBW.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSDOF.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSDOFBlur.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSEdgeDetection.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSPostBloom.glsl" />
+    <None Include="..\Resources\Shaders\Effects\FSPreBloom.glsl" />
+    <None Include="..\Resources\Shaders\Effects\VSEffect.glsl" />
+    <None Include="..\Resources\Shaders\EnvironmentReflectionFS.fs" />
+    <None Include="..\Resources\Shaders\EnvironmentReflectionVS.vs" />
+    <None Include="..\Resources\Shaders\FireFS.fs" />
+    <None Include="..\Resources\Shaders\FireVS.vs" />
+    <None Include="..\Resources\Shaders\NormalMapFS.fs" />
+    <None Include="..\Resources\Shaders\NormalMapVS.vs" />
+    <None Include="..\Resources\Shaders\PhongLightingFS.fs" />
+    <None Include="..\Resources\Shaders\PhongLightingVS.vs" />
+    <None Include="..\Resources\Shaders\Shader2D.fs" />
+    <None Include="..\Resources\Shaders\Shader2D.vs" />
+    <None Include="..\Resources\Shaders\TerrainFS.fs" />
+    <None Include="..\Resources\Shaders\TerrainVS.vs" />
+    <None Include="..\Resources\Shaders\TriangleShaderFS.fs" />
+    <None Include="..\Resources\Shaders\TriangleShaderVS.vs" />
+    <None Include="..\Resources\Shaders\WaterFS.fs" />
+    <None Include="..\Resources\Shaders\WaterVS.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.vcxproj">
+      <Project>{0d44529e-f7dd-4454-8ead-9afd857f53b4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
