@@ -1,0 +1,21 @@
+#Models: 1
+ID 0
+FILE Models/AK74_Type1.obj
+
+#2D Textures: 1
+ID 0
+FILE Textures/AK74_Type1_Diff.tga
+TILING REPEAT
+
+#Cube Textures: 1
+ID 0
+FILE Textures/envMap.tga
+TILING CLAMP
+
+#Shaders: 1
+ID 0
+VS Shaders/TriangleShaderVS.vs
+FS Shaders/TriangleShaderFS.fs
+STATE 2
+STATE CULLING
+STATE DEPTH_TEST

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Win32Res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{c0932b65-a048-4eda-aa9d-968b1fac00c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders">
+      <UniqueIdentifier>{8e8d34ec-afd8-4512-9e04-967542185c50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders\Effects">
+      <UniqueIdentifier>{e82ddc78-60bd-41b4-932a-d97d15459bda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="GameStates">
+      <UniqueIdentifier>{e971359f-fe4e-46dc-b223-a8795c0ebdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{b6582cc5-893f-4f14-8b8e-943c36321e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InGameObjects">
+      <UniqueIdentifier>{9a4e63d2-24a7-4515-a567-9e99f5fb906d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainFramework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="FBO.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Pass.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourcesManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimaryWeapon.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletsManager.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxObject.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Object2DManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthorState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCompleteState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>InGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadFNT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpState.cpp">
+      <Filter>GameStates</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectManager.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="FBO.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Pass.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcesManager.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderPropertiesLoc.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDefineList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimaryWeapon.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletsManager.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxObject.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Object2DManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthorState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlayManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelCompleteState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>InGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadFNT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpState.h">
+      <Filter>GameStates</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\EM.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="..\Resources\RM.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="..\Resources\SM.txt">
+      <Filter>Resources</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shaders\CubeFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\CubeVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\EnvironmentReflectionFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\EnvironmentReflectionVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\FireFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\FireVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\NormalMapFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\NormalMapVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\PhongLightingFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\PhongLightingVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Shader2D.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Shader2D.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\TerrainFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\TerrainVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\TriangleShaderFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\TriangleShaderVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\WaterFS.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\WaterVS.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSBlur.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSBW.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSDOF.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSDOFBlur.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSEdgeDetection.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSPostBloom.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\FSPreBloom.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+    <None Include="..\Resources\Shaders\Effects\VSEffect.glsl">
+      <Filter>Resources\Shaders\Effects</Filter>
+    </None>
+  </ItemGroup>
+</Project>
