@@ -251,13 +251,46 @@ void CleanUp()
 	FontGame::FreeInstance();
 }
 
+// The bundled EGL DLL initializes WGL from DllMain. Initialize the driver
+// first, outside the DLL loader lock, so its worker threads can start.
+static bool InitializeOpenGLDriver()
+{
+	HWND window = CreateWindowA("STATIC", "OpenGL initialization", WS_POPUP,
+		0, 0, 1, 1, NULL, NULL, GetModuleHandle(NULL), NULL);
+	if (!window) return false;
+	HDC dc = GetDC(window);
+	PIXELFORMATDESCRIPTOR format = { sizeof(PIXELFORMATDESCRIPTOR), 1 };
+	format.dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL;
+	format.iPixelType = PFD_TYPE_RGBA;
+	format.cColorBits = 24;
+	int index = ChoosePixelFormat(dc, &format);
+	HGLRC context = NULL;
+	if (index && SetPixelFormat(dc, index, &format))
+		context = wglCreateContext(dc);
+	bool ready = context && wglMakeCurrent(dc, context);
+	if (ready) wglMakeCurrent(NULL, NULL);
+	if (context) wglDeleteContext(context);
+	ReleaseDC(window, dc);
+	DestroyWindow(window);
+	return ready;
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
+	if (!InitializeOpenGLDriver())
+	{
+		fprintf(stderr, "Could not initialize the OpenGL driver.\n");
+		return 1;
+	}
 	ESContext esContext;
 
     esInitContext ( &esContext );
 
-	esCreateWindow ( &esContext, "Defense 3D", Globals::screenWidth, Globals::screenHeight, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
+	if (!esCreateWindow ( &esContext, "Defense 3D", Globals::screenWidth, Globals::screenHeight, ES_WINDOW_RGB | ES_WINDOW_DEPTH))
+	{
+		fprintf(stderr, "Could not create the OpenGL ES window (EGL error 0x%x).\n", eglGetError());
+		return 1;
+	}
 
 	if ( Init ( &esContext ) != 0 )
 		return 0;
