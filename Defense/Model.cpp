@@ -100,6 +100,11 @@ void Model::InitModelOBJ(char * pFileOBJTarget)
 
 	std::fstream f;
 	f.open(pFileOBJTarget);
+	if (!f)
+	{
+		fprintf(stderr, "Cannot load OBJ model: %s (file missing or unreadable).\n", pFileOBJTarget);
+		return;
+	}
 	if (f)
 	{
 		std::string line;
